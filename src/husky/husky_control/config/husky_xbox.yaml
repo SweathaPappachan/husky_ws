@@ -1,4 +1,4 @@
-# Teleop configuration for PS4 joystick using the x-pad configuration.
+# Teleop configuration for XBOX joystick using the x-pad configuration.
 # Left thumb-stick up/down for velocity, left/right for twist
 # Left shoulder button for enable
 # Right shoulder button for enable-turbo
@@ -8,7 +8,7 @@
 #       _=====_                                  _=====_
 #      / _____ \                                / _____ \
 #    +.-'_____'-.------------------------------.-'_____'-.+
-#   /   |     |  '.        S O N Y           .'  |  _  |   \
+#   /   |     |  '.        XBOX              .'  |  _  |   \
 #  / ___| /|\ |___ \                        / ___| /_\ |___ \      (Y)
 # / |      |      | ;                      ; | _         _ ||
 # | | <---   ---> | |                      | ||_|       (_)||  (X)     (B)
@@ -56,10 +56,10 @@
 
 teleop_twist_joy:
   axis_linear: 1 # BOOL: TRUE Sets
-  scale_linear: 0.35 # Linear Movement
+  scale_linear: 0.2 # Linear Movement
   scale_linear_turbo: 0.4 # Max Linear
   axis_angular: 0 # BOOL: FALSE Sets
-  scale_angular: 0.4 # Ang Movement
+  scale_angular: 0.3 # Ang Movement
   # enable_button: 4 # Useless
   enable_turbo_button: 5 
 joy_node:
