@@ -2,14 +2,18 @@
 
 <launch>
 
+<!-- Base Launch -->
+<include file="$(find husky_base)/launch/base.launch" />
+
 <!-- Robot state publisher -->
-<include file="$(find wheelchair_description)/launch/robot_state_publish.launch"/>
+<!-- <include file="$(find husky_description)/launch/description.launch"/> -->
 
 <!-- Realsense Camera launch-->
 <include file="$(find realsense2_camera)/launch/rs_camera.launch"/>
 
 <!-- LiDAR launch -->
-<include file="$(find rplidar_ros)/launch/rplidar_a3.launch" />
+<include file="$(find rplidar_ros)/launch/rplidar_s2.launch" />
+
 
 <!-- Kangaroo driver launch for /odom and control -->
 <!-- <include file="$(find kangaroo_driver)/launch/kangaroo_driver.launch"/>  -->
