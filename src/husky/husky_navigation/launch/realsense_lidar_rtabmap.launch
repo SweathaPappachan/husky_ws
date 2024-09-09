@@ -1,9 +1,9 @@
 <launch>
   <group ns="rtabmap">
  <!-- Localization-only mode -->
-     <arg name="localization"      default="true"/>
+     <arg name="localization"      default="false"/>
      <arg     if="$(arg localization)" name="rtabmap_args"  default=""/>
-     <arg unless="$(arg localization)" name="rtabmap_args"  default=""/>
+     <arg unless="$(arg localization)" name="rtabmap_args"  default="--delete_db_on_start"/>
 
     <node name="rtabmap" pkg="rtabmap_slam" type="rtabmap" output="screen" args="$(arg rtabmap_args)">
 
@@ -24,7 +24,7 @@
       <!-- <param name="Mem/BadSignaturesIgnored"  type="string" value="false"/> Don't ignore bad images for 3D node creation (e.g. white walls) -->
       <param name="RGBD/AngularUpdate"        type="string" value="0.01"/>
       <param name="RGBD/LinearUpdate"         type="string" value="0.01"/>
-      <!-- <param name="RGBD/SavedLocalizationIgnored" type="string" value="false"/>  it is for rtabmap localization inital pose  -->
+      <param name="RGBD/SavedLocalizationIgnored" type="string" value="false"/>  <!--it is for rtabmap localization inital pose  -->
       <param name="RGBD/OptimizeFromGraphEnd" type="string" value="false"/>
       <param name="Optimizer/Slam2D"          type="string" value="true"/>
       <param name="Reg/Strategy"              type="string" value="1"/>   <!-- Registration strategy: 0=visual, 1=ICP, 2=visual+ICP -->
@@ -32,7 +32,7 @@
 	    <!-- <param name="Icp/Iterations"            type="string" value="30"/> -->
 	    <!-- <param name="Icp/VoxelSize"             type="string" value="0.025"/> -->
       <param name="Reg/Force3DoF"             type="string" value="true"/>
-      <param name="Vis/MinInliers"            type="string" value="5"/>    <!--minimum bags to accept loopclosure-->
+      <param name="Vis/MinInliers"            type="string" value="1"/>    <!--minimum bags to accept loopclosure-->
       <!-- <param name="Vis/MaxDepth"              type="string" value="4.0"/>  -->
       <param name="Vis/InlierDistance"        type="string" value="0.1"/>
       <param name="Rtabmap/TimeThr"           type="string" value="700"/>

@@ -4,8 +4,7 @@
   <arg default="true" name="open_rviz" />
   <arg default="/husky_velocity_controller/cmd_vel" name="cmd_vel_topic" />
   <arg default="/husky_velocity_controller/odom" name="odom_topic" />
-
-    <remap from="map" to="/rtabmap/proj_map" />
+  <arg default="$(find husky_navigation)/maps/map.yaml" name="map_file" />
 
 <node name="locomotor" output="screen" pkg="locomove_base" respawn="false" type="move_base">
     <rosparam command="load" file="$(find husky_navigation)/config/rtab_costmap_common_params.yaml" ns="global_costmap" />
