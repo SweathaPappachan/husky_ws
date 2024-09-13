@@ -1,7 +1,7 @@
 global_costmap:
   # Frame
-  global_frame: map
-  robot_base_frame: base_link
+  global_frame: "map"
+  robot_base_frame: "base_link"
 
   # Update Frequency
   update_frequency: 10.0

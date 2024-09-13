@@ -1,6 +1,6 @@
 # map_type: costmap
 
-robot_base_frame: base_link
+robot_base_frame: "base_link"
 
 transform_tolerance: 1.0
 
