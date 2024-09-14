@@ -1,7 +1,7 @@
 <launch>
   <!-- Arguments -->
   <!-- <arg name="model" default="$(env TURTLEBOT3_MODEL)" doc="model type [burger, waffle, waffle_pi]"/> -->
-  <arg default="$(find husky_navigation)/maps/thub_full.yaml" name="map_file" />
+  <arg default="$(find husky_navigation)/maps/map.yaml" name="map_file" />
   <node args="$(arg map_file)" name="map_server" pkg="map_server" type="map_server" />
   <arg name="cmd_vel_topic" default="/husky_velocity_controller/cmd_vel" />
   <arg name="odom_topic" default="/husky_velocity_controller/odom" />
