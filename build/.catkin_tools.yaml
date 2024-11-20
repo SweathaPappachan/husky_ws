@@ -1,0 +1,6 @@
+devel_space: /home/sweatha/husky_ws/devel
+install: false
+install_space: /home/sweatha/husky_ws/install
+profile: default
+source_space: /home/sweatha/husky_ws/src
+workspace: /home/sweatha/husky_ws

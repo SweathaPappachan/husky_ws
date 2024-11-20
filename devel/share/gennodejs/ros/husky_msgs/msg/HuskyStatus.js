@@ -1,0 +1,1 @@
+/home/sweatha/husky_ws/devel/.private/husky_msgs/share/gennodejs/ros/husky_msgs/msg/HuskyStatus.js
